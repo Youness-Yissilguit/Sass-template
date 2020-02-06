@@ -1,0 +1,147 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+/*global*/
+*{
+  @include prefixes(box-sizing, border-box)
+}
+body{
+  height: 4000px;
+  font-family: cursive;
+}
+
+
+/*start the navbar*/
+nav{
+  padding: 20px !important;
+  .navbar-brand{
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+  }
+  .navbar-collapse{
+    justify-content: flex-end;
+    .navbar-nav{
+      background-color: $my-color;
+      padding-left: 60px;
+      padding-right: 60px;
+      @include br-radius(5px);
+      .nav-link{
+        color: #FFF;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@include sm-screen{
+  .navbar-nav{
+    margin-top:20px;
+  }
+}
+/*end the navbar*/
+
+/*start the header*/
+header{
+  height: 80vh;
+  .carousel{
+    height: 100%;
+    background: url("../images/company.jpg") no-repeat;
+    @include prefixes(background-size, cover);
+    p{
+      width: 80%;
+      margin-top: 20%;
+      color: #c1c1c1;
+      @include center-x;
+      background-color: rgba(0, 0, 0, .8);
+      padding: 20px;
+      font-style: italic;
+    }
+  }
+  .carousel-indicators{
+    li{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $my-color
+    }
+  }
+}
+/*end the header*/
+/* start the services*/
+.services{
+  margin: 40px auto;
+  padding: 20px 10px;
+  h2{
+    @extend %main_heading
+  }
+  .box{
+    margin-bottom: 20px;
+    h4{
+      color: #000;
+      margin-bottom: 15px;
+      i{
+        margin-right: 10px;
+        font-size: 32px;
+      }
+    }
+    p{
+      font-size: 18px;
+      color: $p-color;
+      letter-spacing: .8px;
+      line-height: 1.6;
+    }
+  }
+}
+/*End The Services*/
+
+/*start the about*/
+.h2-about{
+  @extend %main_heading;
+}
+.about{
+  background-color:#222;
+  color: #FFF;
+  margin: 10px auto 40px;
+  padding: 60px 10px;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+  h4{
+    text-transform: uppercase
+  }
+  p{
+    color: #ababab;
+    margin-bottom: 30px
+  }
+}
+ @include sm-screen{
+   .about{
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+ }
+/*end The About*/
+
+/*Start Our Team*/
+.our-team{
+  h2{
+    @extend %main_heading;
+  }
+  .boxes{
+    margin-bottom: 15px;
+    @include prefixes(transition, all .5s);
+    &:hover{
+      transform: scale(1.03) rotate(1deg);
+    }
+    .card{
+      width: 100% !important;
+      box-shadow: 1px 1px 5px #CCC;
+      .card-title{
+        color: #000
+      }
+      .card-text{
+        color: $p-color
+      }
+    }
+  }
+}
+
+/*End Our Team*/

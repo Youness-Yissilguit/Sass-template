@@ -1,0 +1,141 @@
+/*prefixes properties*/
+/*aline verticale and horizontale*/
+.services h2, .h2-about, .our-team h2 {
+  background-color: #f0574b;
+  color: #FFF;
+  border-radius: 15px;
+  height: 45px;
+  position: relative;
+  margin-bottom: 50px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .services h2::before, .h2-about::before, .our-team h2::before, .services h2::after, .h2-about::after, .our-team h2::after {
+    position: absolute;
+    width: 100%;
+    content: '';
+    left: 100%;
+    height: 1px;
+    top: 50%;
+    background-color: #f0574b; }
+  .services h2::after, .h2-about::after, .our-team h2::after {
+    right: 100%;
+    left: auto; }
+
+/*media for small screen*/
+/*global*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  height: 4000px;
+  font-family: cursive; }
+
+/*start the navbar*/
+nav {
+  padding: 20px !important; }
+  nav .navbar-brand {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive; }
+  nav .navbar-collapse {
+    justify-content: flex-end; }
+    nav .navbar-collapse .navbar-nav {
+      background-color: #f0574b;
+      padding-left: 60px;
+      padding-right: 60px;
+      border-radius: 5px; }
+      nav .navbar-collapse .navbar-nav .nav-link {
+        color: #FFF;
+        font-weight: bold; }
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-top: 20px; } }
+/*end the navbar*/
+/*start the header*/
+header {
+  height: 80vh; }
+  header .carousel {
+    height: 100%;
+    background: url("../images/company.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    header .carousel p {
+      width: 80%;
+      margin-top: 20%;
+      color: #c1c1c1;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-style: italic; }
+  header .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f0574b; }
+
+/*end the header*/
+/* start the services*/
+.services {
+  margin: 40px auto;
+  padding: 20px 10px; }
+  .services .box {
+    margin-bottom: 20px; }
+    .services .box h4 {
+      color: #000;
+      margin-bottom: 15px; }
+      .services .box h4 i {
+        margin-right: 10px;
+        font-size: 32px; }
+    .services .box p {
+      font-size: 18px;
+      color: #5a5a5a;
+      letter-spacing: .8px;
+      line-height: 1.6; }
+
+/*End The Services*/
+/*start the about*/
+.about {
+  background-color: #222;
+  color: #FFF;
+  margin: 10px auto 40px;
+  padding: 60px 10px;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%); }
+  .about h4 {
+    text-transform: uppercase; }
+  .about p {
+    color: #ababab;
+    margin-bottom: 30px; }
+
+@media (max-width: 768px) {
+  .about {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+/*end The About*/
+/*Start Our Team*/
+.our-team .boxes {
+  margin-bottom: 15px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  .our-team .boxes:hover {
+    transform: scale(1.03) rotate(1deg); }
+  .our-team .boxes .card {
+    width: 100% !important;
+    box-shadow: 1px 1px 5px #CCC; }
+    .our-team .boxes .card .card-title {
+      color: #000; }
+    .our-team .boxes .card .card-text {
+      color: #5a5a5a; }
+
+/*End Our Team*/
+
+/*# sourceMappingURL=style.css.map */

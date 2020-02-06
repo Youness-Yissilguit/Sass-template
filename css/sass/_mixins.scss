@@ -1,0 +1,48 @@
+@mixin br-radius($rad) {
+  border-radius: $rad
+}
+
+/*prefixes properties*/
+@mixin prefixes($propertie, $value) {
+  -webkit-#{$propertie}: $value;
+  -moz-#{$propertie}: $value;
+  -o-#{$propertie}: $value;
+  #{$propertie}: $value;
+}
+
+/*aline verticale and horizontale*/
+ @mixin center-x{
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+//the main heading
+%main_heading {
+  background-color: $my-color;
+  color: #FFF;
+  border-radius: 15px;
+  height: 45px;
+  position: relative;
+  margin-bottom: 50px;
+  width: 200px;
+  @include center-x;
+  &::before, &::after{
+    position: absolute;
+    width: 100%;
+    content: '';
+    left: 100%;
+    height: 1px;
+    top: 50%;
+    background-color: $my-color;
+    }
+    &::after{
+      right: 100%;
+      left: auto;
+    }
+}
+/*media for small screen*/
+@mixin sm-screen{
+  @media (max-width:768px){
+    @content
+  }
+}
